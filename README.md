@@ -1,85 +1,55 @@
-📍 Consulta de CEP
+# Consulta de CEP
 
-Aplicativo Android desenvolvido em Kotlin com Android Studio para consultar informações de endereços a partir de um CEP.
+Aplicativo Android desenvolvido em Kotlin (Android Studio) para consultar informações de endereços a partir de um CEP, consumindo a API ViaCEP.
 
-O projeto realiza o consumo de uma API de consulta de CEP e apresenta os dados retornados diretamente na tela do aplicativo, facilitando a busca de informações como logradouro, bairro, cidade, UF e DDD.
+## Sobre o projeto
 
-📱 Sobre o projeto
+O aplicativo permite que o usuário insira um CEP e, ao tocar em "Consultar CEP", realiza uma chamada à API ViaCEP e apresenta na tela os dados retornados (logradouro, bairro, cidade, UF, DDD etc.). O projeto foi desenvolvido como exercício para praticar Kotlin, consumo de APIs, tratamento de respostas JSON e coroutines.
 
-O Consulta de CEP foi desenvolvido como um projeto para praticar conceitos de desenvolvimento mobile com Android e Kotlin, integração com APIs e manipulação dos dados retornados por uma requisição HTTP.
+## Funcionalidades
 
-O usuário informa um CEP no campo de consulta e, ao clicar em "Consultar CEP", o aplicativo realiza a busca e apresenta as informações do endereço encontrado.
+- Consulta de endereço através do CEP
+- Consumo de API externa (ViaCEP)
+- Exibição de logradouro, bairro, cidade, UF e DDD
+- Tratamento de CEPs inválidos ou sem resultado
+- Interface para dispositivos Android
 
-✨ Funcionalidades
+## Tecnologias
 
-🔎 Consulta de endereço através do CEP
+- Kotlin
+- Android Studio
+- Android SDK
+- Coroutines
+- AndroidX
+- HTTP/REST (ViaCEP)
 
-🌐 Consumo de API externa
+## API utilizada
 
-📍 Exibição do logradouro
+- ViaCEP — https://viacep.com.br/
 
-🏘️ Exibição do bairro
-
-🏙️ Exibição da cidade
-
-🗺️ Exibição da UF
-
-☎️ Exibição do DDD
-
-⚠️ Tratamento de consultas inválidas ou sem resultado
-
-📱 Interface desenvolvida para dispositivos Android
-
-🛠️ Tecnologias utilizadas
-
-Kotlin
-
-Android Studio
-
-Android SDK
-
-API ViaCEP
-
-HTTP/REST
-
-Coroutines
-
-AndroidX
-
-🔌 API utilizada
-
-O projeto utiliza a ViaCEP para consultar os dados de endereço a partir do CEP.
-
-Documentação:
-
-https://viacep.com.br/
-
-Exemplo de consulta:
+Exemplo de consulta (retorna JSON):
 
 https://viacep.com.br/ws/01001000/json/
 
-A API retorna os dados do endereço em formato JSON, que são utilizados pelo aplicativo para preencher as informações apresentadas na tela.
+## Interface (capturas de tela)
 
-📲 Interface
+Abaixo estão as capturas presentes na pasta `screenshots` do repositório.
 
-Tela inicial
+![Tela inicial vazia](screenshots/tela-vazia.jpeg)
 
-Nesta tela o usuário informa o CEP que deseja consultar.
+*Tela inicial: insira o CEP e toque em "Consultar CEP".*
 
+![Tela com dados preenchidos](screenshots/tela-dados.jpeg)
 
+*Tela com os campos preenchidos com os dados retornados pela API.*
 
-Tela com os dados do endereço
+> Observação: se a segunda imagem também estiver vazia ou for igual à primeira, substitua `screenshots/tela-dados.jpeg` pela captura correta com os campos preenchidos.
 
-Após realizar a consulta, os dados retornados pela API são apresentados nos campos de endereço.
+## Estrutura do projeto
 
+Uma visão simplificada da estrutura:
 
-
-Observação: as duas imagens enviadas para este README estão atualmente idênticas. Caso a segunda imagem deva mostrar os campos preenchidos, substitua screenshots/tela-dados.jpeg pela captura correta.
-
-🧩 Estrutura do projeto
-
-Uma estrutura simplificada do projeto:
-
+```
 ConsultaCEP/
 │
 ├── app/
@@ -90,7 +60,6 @@ ConsultaCEP/
 │           │       ├── MainActivity.kt
 │           │       └── api/
 │           │           └── ViaCepClient.kt
-│           │
 │           └── res/
 │               ├── drawable/
 │               ├── layout/
@@ -104,106 +73,34 @@ ConsultaCEP/
 ├── build.gradle.kts
 ├── settings.gradle.kts
 └── README.md
+```
 
-A estrutura acima é uma representação geral. Os diretórios podem variar de acordo com a configuração do projeto.
+## Como executar
 
-⚙️ Como executar o projeto
+1. Clone o repositório:
 
-1. Clone o repositório
+```
+git clone https://github.com/Karina-Amorim-Dev/AppConsultaCep.git
+```
 
-git clone URL_DO_SEU_REPOSITORIO
+2. Abra o projeto no Android Studio.
+3. Aguarde a sincronização do Gradle e instalação das dependências.
+4. Execute o app em um emulador ou dispositivo Android.
+5. Insira um CEP válido (ex.: `01001-000`) e toque em "Consultar CEP".
 
-2. Abra o projeto
+## Conceitos praticados
 
-Abra a pasta do projeto no Android Studio.
+- Criação de interfaces Android
+- Programação em Kotlin
+- Validação de entrada
+- Consumo de APIs REST
+- Tratamento de JSON
+- Coroutines
 
-3. Aguarde a sincronização
-
-Aguarde o Android Studio concluir a sincronização do Gradle e a instalação das dependências necessárias.
-
-4. Execute o aplicativo
-
-Você pode executar o projeto:
-
-em um dispositivo Android físico; ou
-
-em um emulador configurado no Android Studio.
-
-5. Faça uma consulta
-
-Informe um CEP válido, por exemplo:
-
-01001-000
-
-Depois toque em:
-
-Consultar CEP
-
-O aplicativo realizará a consulta e exibirá os dados encontrados.
-
-🧠 Conceitos praticados
-
-Com este projeto foram praticados conceitos importantes de desenvolvimento Android:
-
-Criação de interfaces para aplicativos Android
-
-Programação em Kotlin
-
-Manipulação de componentes de interface
-
-Gerenciamento de eventos de clique
-
-Entrada e validação de dados
-
-Consumo de APIs REST
-
-Requisições HTTP
-
-Processamento de respostas JSON
-
-Uso de coroutines
-
-Organização do código em diferentes classes
-
-Integração entre interface e camada de comunicação com API
-
-📋 Fluxo da aplicação
-
-Usuário
-   │
-   ▼
-Informa o CEP
-   │
-   ▼
-Clica em "Consultar CEP"
-   │
-   ▼
-Aplicativo realiza a requisição
-   │
-   ▼
-API ViaCEP
-   │
-   ▼
-Retorna os dados em JSON
-   │
-   ▼
-Aplicativo processa os dados
-   │
-   ▼
-Informações do endereço
-   │
-   ├── Logradouro
-   ├── Bairro
-   ├── Cidade
-   ├── UF
-   └── DDD
-
-👩‍💻 Desenvolvedora
+## Desenvolvedora
 
 Karina Amorim
 
-Projeto desenvolvido para fins acadêmicos e de aprendizado em desenvolvimento de sistemas.
+## Licença
 
-📄 Licença
-
-Este projeto foi desenvolvido para fins educacionais.
+Projeto para fins educacionais.
