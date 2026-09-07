@@ -35,11 +35,11 @@ https://viacep.com.br/ws/01001000/json/
 
 Abaixo estão as capturas presentes na pasta `screenshots` do repositório.
 
-![Tela inicial vazia](screenshots/tela-vazia.jpeg)
+![Tela inicial vazia](screenshots/telavazia.jpeg)
 
 *Tela inicial: insira o CEP e toque em "Consultar CEP".*
 
-![Tela com dados preenchidos](screenshots/tela-dados.jpeg)
+![Tela com dados preenchidos](screenshots/teladados.jpeg)
 
 *Tela com os campos preenchidos com os dados retornados pela API.*
 
